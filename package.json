@@ -1,0 +1,22 @@
+{
+  "name": "primary_cltw-oris-node",
+  "version": "1.0.0",
+  "description": "This is the primary production node for the UMS team's field-monitoring application.",
+  "main": "index.js",
+  "author": "Andrew Valenski",
+  "license": "MIT",
+  "dependencies": {
+    "arcgis-js-api": "^4.8.1",
+    "bootstrap": "^4.1.1",
+    "datatables.net-bs4": "^1.10.19",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.3",
+    "fs": "^0.0.1-security",
+    "jquery": "^3.3.1",
+    "oracledb": "^2.3.0",
+    "path": "^0.12.7",
+    "popper.js": "^1.14.4",
+    "pug": "^2.0.3",
+    "socket.io": "^2.1.1"
+  }
+}

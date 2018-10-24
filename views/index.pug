@@ -1,0 +1,78 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, initial-scale=1,maximum-scale=1,user-scalable=no', name='viewport')
+    title CLTW ORIS 
+
+    link(rel='stylesheet', href='/style/css/bootstrap.min.css')
+    script(src='/javascript/jquery.js')
+    script(src='/javascript/dataTables/jquery-dataTables-min.js')
+    script(src='/javascript/dataTables/dataTables-bootstrap4-min.js')
+    link(rel='stylesheet', href="/style/css/jquery-dataTables-min.css")
+    link(rel='stylesheet', href='https://js.arcgis.com/4.8/esri/css/main.css')
+    style.
+      html,
+      body,
+      #viewDiv {
+      margin: auto;
+      height: 100%;
+      }
+
+      #tableDiv {
+        position: relative;
+        margin-top: 25px;
+        margin: auto;
+        max-height:3%;
+      }
+
+      .esri-legend__layer-caption {
+        display:none;
+      }
+
+      .esri-component.esri-legend.esri-widget--panel.esri-widget {
+        max-height: 290px;
+      }
+        
+      .esri-view-height-less-than-medium .esri-popup__main-container {
+        max-height: 325px;
+      }
+  
+      .esri-component.esri-attribution.esri-widget{
+        display:none;
+      }
+
+    script(src='https://js.arcgis.com/4.8/')
+    script(src='/javascript/webmap.js')
+  body(style="background: linear-gradient(to bottom right, #f0ffff , #e8e9ff);")
+    nav#navBar.navbar.navbar-static-top.navbar-light.bg-faded(style='background: linear-gradient(to right, #1D4350, #A43931)')
+      a.navbar-brand(style="color:#f2f3f7;font-family: 'Century Gothic', CenturyGothic, Geneva,AppleGothic, sans-serif;") Charlotte Water ORIS: Operational Real-time In-field Status
+      //#navbar-collapse.collapse.navbar-toggleable-sm
+        //ul.nav.navbar-nav.pull-xs-right
+          //li.nav-item
+            //button#mapToggle.nav-item.btn.btn-primary Hide Map
+          //li.nav-item
+          //button#tableToggle.nav-item.btn.btn-primary Hide Table
+    #parentDiv(style="height:92%;")
+      #topDiv.topClass(style="height:55%;width:100%")
+        #viewDiv(style="width:90%;margin-top:10px;")
+      #bottomDiv.bottomClass(style="height:auto;width:100%;margin:auto; margin-top: 10px;")
+        #tableDiv
+          .container
+            .row
+              .col-md-12
+                table#stafftable.table.table-striped.table-bordered.dt-responsive.nowrap.table-hover.compact(cellspacing='0', width='100%')
+                  thead
+                    tr
+                      th Tech Name
+                      th Order #
+                      th Job Code
+                      th State
+                      th Start Time
+                      th Duration
+                      th Duration (Secs)
+                      th Average Duration (Secs)
+                      th Flag
+                      th Latitude
+                      th Longitude
+
